@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raport dla {{IMIE}}</title>
+  <style>
+    body { margin:0; padding:40px 20px; background:#111318; color:#f4f4f5; font-family:Arial,sans-serif; }
+    main { max-width:850px; margin:50px auto; }
+    .tag { color:#e34b72; letter-spacing:3px; font-size:12px; }
+    h1 { font-size:42px; }
+    .card { background:#1c1e26; border:1px solid #38303a; border-top:4px solid #98012e; border-radius:16px; padding:30px; }
+    p { color:#c4c4cc; line-height:1.7; }
+    footer { color:#71717a; text-align:center; margin-top:30px; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="tag">SPORT ANALYTICS / 2026</span>
+    <section class="card">
+      <h1>Raport dla {{IMIE}}</h1>
+      <p>Witaj! To jest spersonalizowany raport koszyków przygotowany przez AWS Lambda.</p>
+      <p>Treść strony jest pobierana z prywatnego bucketu Amazon S3.</p>
+      <p>Zmiana szablonu nie wymaga ponownego wdrażania funkcji Lambda.</p>
+    </section>
+      <p>Aktualizacja: szablon zmieniono bez ponownego wdrazania Lambda.</p>
+    <footer>UWB · Laboratorium 2 · AWS Lambda + S3</footer>
+  </main>
+</body>
+</html>

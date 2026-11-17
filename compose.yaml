@@ -1,0 +1,20 @@
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: lab2-localstack
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      SERVICES: s3,lambda,iam,sts
+      DEBUG: "0"
+      LOCALSTACK_AUTH_TOKEN: ${LOCALSTACK_AUTH_TOKEN:?Set token in .env}
+      LAMBDA_DOCKER_NETWORK: lab2-network
+      DOCKER_HOST: unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - lab2-network
+
+networks:
+  lab2-network:
+    name: lab2-network
